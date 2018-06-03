@@ -21,7 +21,7 @@ public class ControllerFacade implements IController {
 
     /** The model. */
     private final IModel model;
-    private int choice = 1;	
+    private int choice = 0;	
     private boolean loop = true;
     
      /**
@@ -64,7 +64,7 @@ public class ControllerFacade implements IController {
         /**
          * The player chooses the map and these conditions allow to load the database in a table
          */
-//        while(loop) {
+        while(loop) {
         	
         this.getView().displayMessage("Hello ! Which map would you load ?\n 1 : Level 1\n 2 : Level 2\n 3 : Level 3\n 4 : Level 4\n 5 : Level 5");
         choice = this.getView().ScanMap();
@@ -77,7 +77,7 @@ public class ControllerFacade implements IController {
        
         this.getView().Window();
         this.getView().setMyMap();
-//        }
+        }
     }
     
     /**
